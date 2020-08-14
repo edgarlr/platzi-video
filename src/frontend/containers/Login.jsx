@@ -4,27 +4,27 @@ import { Link } from 'react-router-dom';
 import { loginRequest } from '../actions';
 import '../assets/styles/components/Login.scss';
 
-const Login = props => {
+const Login = (props) => {
   const [form, setValues] = useState({
     email: '',
   });
 
-  const handleInput = event => {
+  const handleInput = (event) => {
     setValues({
       ...form,
       [event.target.name]: event.target.value,
-    })
+    });
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     props.loginRequest(form);
     props.history.push('/');
   };
 
   return (
-    <section className='login'>
-      <section className='login__container'>
+    <div className='login'>
+      <div className='login__container'>
         <h2>Inicia Sesión</h2>
         <form className='login__container--form' onSubmit={handleSubmit}>
           <input
@@ -52,7 +52,7 @@ const Login = props => {
             <a href='/'>Olvidé mi contraseña</a>
           </div>
         </form>
-        <section className='login__container--social-media'>
+        <div className='login__container--social-media'>
           <div>
             <i className='fa fa-facebook-square' />
             Inicia sesión con Facebook
@@ -61,15 +61,15 @@ const Login = props => {
             <i className='fa fa-google' />
             Inicia sesión con Google
           </div>
-        </section>
+        </div>
         <p className='login__container--register'>
           No tienes ninguna cuenta
           <Link to='/register'>
             Regístrate
           </Link>
         </p>
-      </section>
-    </section>
+      </div>
+    </div>
   );
 };
 

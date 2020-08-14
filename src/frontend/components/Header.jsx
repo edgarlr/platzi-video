@@ -6,7 +6,7 @@ import { logoutRequest } from '../actions';
 import '../assets/styles/components/Header.scss';
 import logo from '../assets/static/logo-platzi-video.png';
 
-const Header = props => {
+const Header = (props) => {
   const { user } = props;
 
   // const userLength = (value) => {
@@ -21,11 +21,13 @@ const Header = props => {
   };
 
   return (
-    <header className={
-      location.pathname === '/login' || location.pathname === '/register' ?
-        'header header__login-register' :
-        'header'
-    }>
+    <header
+      className={
+        location.pathname === '/login' || location.pathname === '/register' ?
+          'header header__login-register' :
+          'header'
+      }
+    >
       <Link to='/'>
         <img className='header__img' src={logo} alt='PlatziVideo' />
       </Link>
@@ -61,7 +63,7 @@ const Header = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     user: state.user,
   };

@@ -4,7 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Layout = withRouter(({ children, location }) => (
-  <div className="App">
+  <div className='App'>
     <Header location={location} />
     { children }
     <Footer location={location} />
