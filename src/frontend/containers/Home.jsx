@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Search from '../components/Search';
 import Categories from '../components/Categories';
@@ -14,7 +14,7 @@ const Home = ({ myList, trends, originals }) => {
       {myList.length > 0 && (
         <Categories title='Mi lista'>
           <Carrousel>
-            {myList.map((item) => (
+            {myList.map(item => (
               // eslint-disable-next-line react/jsx-props-no-spreading
               <CarrouselItem
                 key={item.id}

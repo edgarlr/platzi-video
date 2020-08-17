@@ -27,6 +27,7 @@ const CarrouselItem = (props) => {
 
           {isList ? (
             <i
+              role='img'
               className='material-icons'
               onClick={() => handleDeleteFavorite(id)}
             >
@@ -34,6 +35,7 @@ const CarrouselItem = (props) => {
             </i>
           ) : (
             <i
+              role='img'
               className='material-icons'
               onClick={handleSetFavorite}
             >

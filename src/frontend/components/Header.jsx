@@ -7,7 +7,7 @@ import '../assets/styles/components/Header.scss';
 import logo from '../assets/static/logo-platzi-video.png';
 
 const Header = (props) => {
-  const { user } = props;
+  const { user, location } = props;
 
   // const userLength = (value) => {
   //   console.log(value);
@@ -22,11 +22,11 @@ const Header = (props) => {
 
   return (
     <header
-      className={
+      className={`header ${
         location.pathname === '/login' || location.pathname === '/register' ?
-          'header header__login-register' :
-          'header'
-      }
+          'header__login-register' :
+          ''}
+      `}
     >
       <Link to='/'>
         <img className='header__img' src={logo} alt='PlatziVideo' />

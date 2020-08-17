@@ -1,25 +1,26 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { getVideoSource } from '../actions';
 import '../assets/styles/components/Player.scss';
-import { Redirect } from 'react-router-dom';
 
-const Player = props => {
-  const { id } = props.match.params;
-  const hasPlaying = Object.keys(props.playing).length > 0;
+const Player = (props) => {
+  const { match, playing } = props;
+  const { id } = match.params;
+  const hasPlaying = Object.keys(playing).length > 0;
 
   useEffect(() => {
     props.getVideoSource(id);
   }, []);
 
   return hasPlaying ? (
-    <div className="Player">
+    <div className='Player'>
       <video controls autoPlay>
-        <source src={props.playing.source} type="video/mp4" />
+        <source src={playing.source} type='video/mp4' />
       </video>
       <div>
-        <div className="Player-back">
-          <button type="button" onClick={() => props.history.goBack()}>
+        <div className='Player-back'>
+          <button type='button' onClick={() => props.history.goBack()}>
             Regresar
           </button>
         </div>
@@ -30,10 +31,10 @@ const Player = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     playing: state.playing,
-  }
+  };
 };
 
 const mapDispatchToProps = {
