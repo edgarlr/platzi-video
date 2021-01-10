@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/server/index",
     "build": "webpack-cli --config webpack.config.js",
-    "start": "node src/server/index",
+    "start": "NODE_ENV=production node src/server/index",
     "lint": "eslint src/frontend/ --ext .js --ext .jsx --fix"
   },
   "keywords": [],
