@@ -2,14 +2,22 @@
   "version": 2,
   "builds": [
       {
-          "src": "./src/server/index.js",
-          "use": "@vercel/node"
+          "src": "package.json",
+          "use": "@vercel/statick-build"
       }
   ],
   "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "/"
-      }
+    {
+      "src": "(.*).js", "dest": "/$1"
+    },
+    {
+      "src": "(.*).json", "dest": "/$1.json"
+    },
+    {
+      "src": "(.*).png", "dest": "/$1.png"
+    },
+    {
+      "src": "/.*", "dest": "/index.html"
+    }
   ]
 }
