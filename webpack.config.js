@@ -9,7 +9,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 require('dotenv').config();
 
 const isDev = process.env.ENV === 'development';
-const entry = ['./src/frontend/index.js'];
+const entry = ['./src/index.js'];
 
 if (isDev) {
   entry.push(
@@ -21,7 +21,7 @@ module.exports = {
   entry,
   mode: process.env.ENV,
   output: {
-    path: path.resolve(__dirname, 'src/server/public'),
+    path: path.resolve(__dirname, 'api/public'),
     filename: isDev ? 'assets/app.js' : 'assets/app-[hash].js',
     publicPath: '/',
   },
@@ -101,7 +101,7 @@ module.exports = {
       }),
     isDev ? () => {} : new ManifestPlugin(),
     isDev ? () => {} : new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/server/public'),
+      cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'api/public'),
     }),
     new MiniCssExtractPlugin({
       filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css',

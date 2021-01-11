@@ -76,4 +76,4 @@ yarn-error.log
 dist/
 
 # Public
-src/server/public
+api/public

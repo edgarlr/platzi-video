@@ -9,10 +9,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { renderRoutes } from 'react-router-config';
 import { StaticRouter } from 'react-router-dom';
-import serverRoutes from '../frontend/routes/serverRoutes';
-import reducer from '../frontend/reducers';
-import Layout from '../frontend/components/Layout';
-import initialState from '../frontend/initialState';
+import serverRoutes from '../src/routes/serverRoutes';
+import reducer from '../src/reducers';
+import Layout from '../src/components/Layout';
+import initialState from '../src/initialState';
 import getManifest from './getManifest';
 
 dotenv.config();
@@ -23,7 +23,7 @@ const app = express();
 
 if (ENV === 'development') {
   console.log('Development Config');
-  const webpackConfig = require('../../webpack.config');
+  const webpackConfig = require('../webpack.config');
   const webpackDevMiddleware = require('webpack-dev-middleware');
   const webpackHotMiddleware = require('webpack-hot-middleware');
   const compiler = webpack(webpackConfig);
