@@ -35,7 +35,7 @@ const Home = ({ myList, trends, originals }) => {
         </Carrousel>
       </Categories>
 
-      <Categories title='Originales de PlatziVIdeo'>
+      <Categories title='Originales'>
         <Carrousel>
           {originals.map(item => (
             // eslint-disable-next-line react/jsx-props-no-spreading
