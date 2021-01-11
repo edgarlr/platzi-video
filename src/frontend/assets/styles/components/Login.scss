@@ -1,5 +1,7 @@
+@import '../Vars.scss';
+
 .login {
-  background: linear-gradient(#21C08B, #AB88FF);
+  background: linear-gradient($main-color, $footer-color);
   display: flex;
   align-items: center;
   justify-content: center;

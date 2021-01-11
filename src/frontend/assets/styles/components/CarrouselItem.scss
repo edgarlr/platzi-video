@@ -1,5 +1,7 @@
+@import '../Vars.scss';
+
 .carrousel-item {
-  background-color: aqua;
+  background-color: rgba(46, 46, 46, 0.5);
   width: 200px;
   height: 250px;
   border-radius: 25px;
@@ -47,7 +49,7 @@
 .carrousel-item__details i {
   margin-left: 6px;
   color: white;
-  background-color: #21C08B;
+  background-color: $accent-color;
   border-radius: 25px;
 }
 

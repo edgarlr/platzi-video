@@ -1,3 +1,5 @@
+@import '../Vars.scss';
+
 .footer {
   display: flex;
   align-items: center;
@@ -6,7 +8,7 @@
 }
 
 .footer__register-login {
-  background-color: #AB88FF;
+  background-color: $footer-color;
 }
 
 .footer a {
