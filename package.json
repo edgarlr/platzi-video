@@ -9,6 +9,9 @@
     "start": "node src/server/index",
     "lint": "eslint src/ --ext .js --ext .jsx --fix"
   },
+  "engines": {
+    "node": "12.16.x"
+  },
   "keywords": [],
   "author": "@edgarlr",
   "license": "ISC",
