@@ -2,11 +2,11 @@
   "name": "video-streaming-app",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server/index.js",
+  "main": "api/index.js",
   "scripts": {
-    "dev": "nodemon src/server/index",
+    "dev": "nodemon api/index",
     "build": "webpack-cli --config webpack.config.js",
-    "start": "node src/server/index",
+    "start": "node api/index",
     "lint": "eslint src/ --ext .js --ext .jsx --fix"
   },
   "engines": {

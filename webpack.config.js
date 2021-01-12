@@ -9,7 +9,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 require('dotenv').config();
 
 const isDev = process.env.ENV === 'development';
-const entry = ['./src/frontend/index.js'];
+const entry = ['./src/index.js'];
 
 if (isDev) {
   entry.push(
