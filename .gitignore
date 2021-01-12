@@ -72,8 +72,8 @@ typings/
 .cache/
 yarn-error.log
 
-# Build
-dist/
 
 # Public
-src/server/public
+public/
+
+.vercel

@@ -1,5 +1,7 @@
+@import '../Vars.scss';
+
 .login {
-  background: linear-gradient(#21C08B, #AB88FF);
+  background: linear-gradient($main-color, $footer-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +23,6 @@
   justify-content: space-between;
   flex-direction: column;
   .input {
-  font-family: "Muli", "sans-serif";
   font-size: 14px;
   margin-bottom: 20px;
   width: 100%;
@@ -36,7 +37,6 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  font-family: "Muli", "sans-serif";
   height: 45px;
   letter-spacing: 1px;
   margin: 10px 0px;

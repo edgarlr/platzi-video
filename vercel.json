@@ -1,25 +1,7 @@
 {
-  "version": 2,
-  "builds": [{
-    "src": "src/server/index.js",
-    "use": "@vercel/node"
-  },
-  {
-    "src": "src/frontend/**",
-    "use": "@vercel/static"
-  }],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "src/server/index.js"
-    },
-    {
-      "src": "/",
-      "dest": "dist/index.html"
-    },
-    {
-      "src": "/(.+)",
-      "dest": "src/frontend/$1"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
+  "env": {
+    "ENV": "production",
+    "PORT": "3000"
+  }
 }

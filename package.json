@@ -2,18 +2,24 @@
   "name": "video-streaming-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "dev": "nodemon src/server/index",
+    "dev": "nodemon api/index",
     "build": "webpack-cli --config webpack.config.js",
-    "start": "NODE_ENV=production node src/server/index",
-    "lint": "eslint src/frontend/ --ext .js --ext .jsx --fix"
+    "start": "node api/index",
+    "lint": "eslint src/ --ext .js --ext .jsx --fix"
+  },
+  "engines": {
+    "node": "12.16.x"
   },
   "keywords": [],
   "author": "@edgarlr",
   "license": "ISC",
   "dependencies": {
     "@babel/register": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "asset-require-hook": "^1.2.0",
     "babel-eslint": "^10.0.3",
     "classnames": "^2.2.6",
@@ -42,9 +48,6 @@
     "webpack-manifest-plugin": "^2.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^5.0.0",

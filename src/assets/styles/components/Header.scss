@@ -4,16 +4,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  & a {
+    text-decoration: none;
+  }
 }
 
 .header__login-register{
-  background-color: #21C08B;
+  background-color: #000;
 }
 
-.header__img {
-  width: 200px;
-  margin-top: 10px;
-  margin-left: 10px;
+.header__logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-left: 2rem;
 }
 
 .header__menu {

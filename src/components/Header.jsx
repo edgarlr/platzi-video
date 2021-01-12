@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import gravatar from '../utils/gravatar';
 import { logoutRequest } from '../actions';
 import '../assets/styles/components/Header.scss';
-import logo from '../assets/static/logo-platzi-video.png';
 
 const Header = (props) => {
   const { user, location } = props;
@@ -29,7 +28,7 @@ const Header = (props) => {
       `}
     >
       <Link to='/'>
-        <img className='header__img' src={logo} alt='PlatziVideo' />
+        <p className='header__logo'>VideoApp</p>
       </Link>
       <div className='header__menu'>
         <div className='header__menu--profile'>
