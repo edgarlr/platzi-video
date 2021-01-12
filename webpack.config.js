@@ -21,7 +21,7 @@ module.exports = {
   entry,
   mode: process.env.ENV,
   output: {
-    path: path.resolve(__dirname, 'api/public'),
+    path: path.resolve(__dirname, 'public'),
     filename: isDev ? 'assets/app.js' : 'assets/app-[hash].js',
     publicPath: '/',
   },
@@ -101,7 +101,7 @@ module.exports = {
       }),
     isDev ? () => {} : new ManifestPlugin(),
     isDev ? () => {} : new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'api/public'),
+      cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'public'),
     }),
     new MiniCssExtractPlugin({
       filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css',

@@ -76,6 +76,6 @@ yarn-error.log
 dist/
 
 # Public
-api/public
+public/
 
 .vercel

@@ -39,16 +39,20 @@ if (ENV === 'development') {
     if (!req.hashManifest) req.hashManifest = getManifest();
     next();
   });
-  app.use(express.static(`${__dirname}/public`));
+
+  // Vercel will serve the static files.
+  // https://vercel.com/guides/using-express-with-vercel#adding-a-public-directory
+
+  app.use(express.static(`${process.cwd()}/public`));
   app.use(helmet());
   app.use(helmet.permittedCrossDomainPolicies());
   app.disable('x-powered-by');
 }
 
 const setResponse = (html, preloadedState, manifest) => {
-  const mainStyles = manifest ? manifest['main.css'] : 'assets/app.css';
-  const mainBuild = manifest ? manifest['main.js'] : 'assets/app.js';
-  const vendorBuild = manifest ? manifest['vendors.js'] : 'assets/vendor.js';
+  const mainStyles = manifest ? manifest['main.css'] : '/assets/app.css';
+  const mainBuild = manifest ? manifest['main.js'] : '/assets/app.js';
+  const vendorBuild = manifest ? manifest['vendors.js'] : '/assets/vendor.js';
   return `
     <!DOCTYPE html>
     <html lang="en">
