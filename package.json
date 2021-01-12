@@ -4,10 +4,11 @@
   "description": "",
   "main": "api/index.js",
   "scripts": {
-    "dev": "nodemon api/index",
+    "dev": "nodemon src/server/index",
     "build": "webpack-cli --config webpack.config.js",
+    "build:client": "webpack-cli --config webpack.config.js",
     "build:server": "webpack-cli --config server.config.js",
-    "start": "NODE_ENV=production node api/index",
+    "start": "node src/server/index",
     "lint": "eslint src/ --ext .js --ext .jsx --fix"
   },
   "keywords": [],
@@ -15,8 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "@babel/register": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/preset-react": "^7.8.3",
     "asset-require-hook": "^1.2.0",
     "babel-eslint": "^10.0.3",
     "classnames": "^2.2.6",
@@ -46,6 +45,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^5.0.0",

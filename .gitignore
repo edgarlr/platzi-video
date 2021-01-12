@@ -72,8 +72,8 @@ typings/
 .cache/
 yarn-error.log
 
-# Build
-dist/
+# Server Build
+api/
 
 # Public
 public/
