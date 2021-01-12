@@ -40,9 +40,6 @@ if (ENV === 'development') {
     next();
   });
 
-  // Vercel will serve the static files.
-  // https://vercel.com/guides/using-express-with-vercel#adding-a-public-directory
-
   app.use(express.static(`${process.cwd()}/public`));
   app.use(helmet());
   app.use(helmet.permittedCrossDomainPolicies());
